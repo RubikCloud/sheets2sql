@@ -1,0 +1,27 @@
+{
+  "name": "google-sheets-migration",
+  "version": "1.0.0",
+  "author": "Simón Vintrob <svintrob@rubikcloud.ai> (https://github.com/simoneeti/)",
+  "description": "Migrate data from Google Sheets to Google Cloud SQL using Prisma",
+  "scripts": {
+    "migrate:prisma": "prisma migrate dev",
+    "sync": "npx ts-node-transpile-only src/sync.ts",
+    "validate": "npx ts-node-transpile-only src/validate.ts",
+    "generate": "npx ts-node-transpile-only src/generate.ts",
+    "code": "npx ts-node-transpile-only generated.ts",
+    "all": "npm run sync && npm run validate && npm run generate"
+  },
+  "dependencies": {
+    "@google-cloud/local-auth": "^2.1.0",
+    "@prisma/client": "^5.14.0",
+    "googleapis": "^105.0.0",
+    "prompts": "^2.4.2"
+  },
+  "devDependencies": {
+    "@types/node": "^20.12.12",
+    "@types/prompts": "^2.4.9",
+    "prisma": "^5.14.0",
+    "ts-node": "^10.9.2",
+    "typescript": "^5.4.5"
+  }
+}

@@ -1,0 +1,9 @@
+node_modules
+package-lock.json
+.env
+svc_acc.json
+dev.db
+dev.db-journal
+migration/prisma/migrations
+migration/out
+codegenerated.ts

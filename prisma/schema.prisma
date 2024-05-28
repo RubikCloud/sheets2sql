@@ -1,0 +1,8 @@
+datasource db {
+  provider = "postgresql"
+  url      = "postgres://postgres:mysecretpassword@172.17.0.2/DataMaster"
+}
+
+generator client {
+  provider = "prisma-client-js"
+}
